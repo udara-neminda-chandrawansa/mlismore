@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #aaa;
+}
+.input-data .underline{
+position: absolute; 
+height: 2px; 
+width: 100%; 
+bottom: 0;
+}
+.input-data .underline:before{
+position: absolute; 
+content: ""; 
+height: 100%; 
+width: 100%; 
+background: #4158d0; 
+transform: scaleX(0); 
+transform-origin: center; 
+transition: transform 0.3s ease; 
+}
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before{
+	transform: scaleX(1);
+}
+
+.input-data{
+	 height: 40px;
+	 width: 200px;
+	 position: relative;
+}
+.input-data input{
+	height: 100%; 
+	width: 100%; 
+	border: none;
+    outline: none;
+	font-size: 17px;
+}
+
+.input-data input:focus ~ label,
+.input-data input:valid ~ label{
+	transform: translateY(-30px); 
+	font-size: 15px; 
+	bottom: 15px;
+}
+
+.input-data label{
+	position: absolute; 
+	bottom: 10px;
+	left: 0; 
+	color: #666; 
+	transition: all 0.3s ease; 
+}
+</style>
+<body>
+    <div class ="input-data">
+        <input type = "text" required>
+        <div class="underline"></div>
+        <label>Username<label> 
+    </div>
+</body>
+</html>

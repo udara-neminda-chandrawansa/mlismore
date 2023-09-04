@@ -1,0 +1,24 @@
+Malcolm is looking for new ways to promote his business and has approached you to develop a website that will act as a showcase of his photography skills and allow users to make enquires about hiring him for weddings and special occasions. The website will need to provide the following features: 
+
+
+• A home page from which it is possible to navigate to the other resources in the website. The home page will need to quickly communicate the purpose of the site, be visually engaging and provide clear navigation to the rest of the site. (HOMEPAGE : DONE)
+
+• A page that provides basic information about Malcolm, his experiences and his passion for photography. (ABOUT : TODO)
+
+• A page that provides information about Malcolm’s prices. (SERVICES : TODO)
+
+• A series of pages (initially between three and six pages) that will act as a gallery and showcase of Malcolm’s photography. (GALLERY : WORKING ON)
+
+	This is a really important part of the website as it will be the main way in which the services of his business will be promoted. 
+	
+	You will need to think carefully about how to present the images and how to structure this part of the site. 
+	
+	Bear in mind that in the future Malcolm will want to add many additional photographs to this part of the site. [Through a Dashboard]
+
+• An enquiry form. 
+
+	- Malcolm would like to provide a way for customers to make enquiries about possible bookings. 
+	- The user will need to be able to enter details such 
+			their contact details, 
+			location and 
+			date of the wedding etc. into a HTML form. (ENQUIRY FORM : TODO)

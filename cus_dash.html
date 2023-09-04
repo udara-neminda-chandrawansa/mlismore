@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="website icon" href="images/portrait.png">
+    <script src="script.js"></script>
+    <title>Photography at its finest | mlismore.com</title>
+</head>
+<body class="dark-bg">
+    <!--nav section-->
+    <section id="nav-section" class="dark-bg">
+        <nav>
+            <div id="logo" style="width: 300px;">
+                <h1 id="dash-type">Customer Dashboard</h1>
+            </div>
+            <ul>
+                <li onclick="location.href = 'index.html';">Home</li>
+                <li>Services
+                    <i class="fa fa-caret-down"></i>
+                    <div class="subnav">
+                        <ul>
+                            <li>Weddings</li>
+                            <li>Portraits</li>
+                            <li>Social Events</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>Gallery
+                    <i class="fa fa-caret-down"></i>
+                    <div class="subnav">
+                        <ul>
+                            <li onclick="window.location.href = 'gallery.html';">Landscape</li>
+                            <li onclick="window.location.href = 'gallery.html#wildlife-section';">Wildlife</li>
+                            <li onclick="window.location.href = 'gallery.html#birds-section';">Coastal Birds</li>
+                        </ul>
+                    </div>
+                </li>
+                <li onclick="window.location.href='sign.html'">Sign In</li>
+            </ul>
+        </nav>
+    </section>
+    <!--control section-->
+    <section id="content-section">
+        <section id="control-section" class="dark-bg">
+            <div id="control-panel">
+                <div class="control-button" onclick="browseMain('1')">
+                    <img src="images/add_en.png" alt="img">
+                    Create a new Enquiry
+                </div>
+                <div class="control-button" onclick="browseMain('2')">
+                    <img src="images/edit_en.png" alt="img">
+                    Edit existing Enquiries
+                </div>
+                <div class="control-button" onclick="browseMain('3')">
+                    <img src="images/view_en.png" alt="img">
+                    View Accepted Enquiries
+                </div>
+            </div>
+        </section>
+        <section class="dark-bg" id="task-pane">
+            <div class="main" id="main1" style="display: flex; align-items: center; justify-content: center;">
+                <div id="frmAddEnqr">
+                    <h2>Create Enquiry</h2>
+                    <p>Name</p>
+                    <input type="text" name="txtName" id="txtName" placeholder="Customer Name">
+                    <p>Tel No</p>
+                    <input type="text" name="txtTel" id="txtTel" placeholder="Contact Number">
+                    <p>Type of Job</p>
+                    <span class="jobTypeSelecter">
+                        <span class="spJob">
+                            <label for="rdWedding" class="lblJob">Wedding</label>
+                            <input type="radio" name="jtype" id="rdWedding" class="rdJob">
+                        </span>
+                        <span class="spJob">
+                            <label for="rdPortrait" class="lblJob">Portrait</label>
+                            <input type="radio" name="jtype" id="rdPortrait" class="rdJob">
+                        </span>
+                        <span class="spJob">
+                            <label for="rdEvent" class="lblJob">Event</label>
+                            <input type="radio" name="jtype" id="rdEvent" class="rdJob">
+                        </span>
+                    </span>
+                    <p>Email</p>
+                    <input type="email" name="txtMail" id="txtMail" placeholder="Customer Email Address">
+                    <p>Location [URL]</p>
+                    <input type="url" name="txtLoc" id="txtLoc" placeholder="URL of Google Maps Location (Applicable for Weddings/Events)">
+                    <button>Submit</button>
+                </div>
+            </div>
+            <div class="main" id="main2">
+                <h1>Edit Existing Enquiry</h1>
+            </div>
+            <div class="main" id="main3">
+                <h1>View Accepted Enquiries</h1>
+            </div>
+        </section>
+    </section>
+    <!--Footer-->
+    <section id="footer-section">
+        <footer class="dark-bg foot">
+            <div class="foot-links">
+                <ul>
+                    <li>About Me</li>
+                    <li>Testimonials</li>
+                    <li>Gallery</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div class="social">
+                <ul>
+                    <li>follow us on social media</li>
+                    <li><img src="images/fb.png" alt="fb"></li>
+                    <li><img src="images/insta.png" alt="insta"></li>
+                    <li><img src="images/lkdin.png" alt="lkdin"></li>
+                </ul>
+            </div>
+        </footer>
+    </section>
+</body>

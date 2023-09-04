@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="website icon" href="images/portrait.png">
+    <script src="script.js"></script>
+    <title>Photography at its finest | mlismore.com</title>
+</head>
+<body class="dark-bg">
+    <!--nav section-->
+    <section id="nav-section" class="dark-bg">
+        <nav>
+            <div id="logo" style="width: 300px;">
+                <h1 id="dash-type">Admin Dashboard</h1>
+            </div>
+            <ul>
+                <li onclick="location.href = 'index.html';">Home</li>
+                <li>Services
+                    <i class="fa fa-caret-down"></i>
+                    <div class="subnav">
+                        <ul>
+                            <li>Weddings</li>
+                            <li>Portraits</li>
+                            <li>Social Events</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>Gallery
+                    <i class="fa fa-caret-down"></i>
+                    <div class="subnav">
+                        <ul>
+                            <li onclick="window.location.href = 'gallery.html';">Landscape</li>
+                            <li onclick="window.location.href = 'gallery.html#wildlife-section';">Wildlife</li>
+                            <li onclick="window.location.href = 'gallery.html#birds-section';">Coastal Birds</li>
+                        </ul>
+                    </div>
+                </li>
+                <li onclick="window.location.href='sign.html'">Sign In</li>
+            </ul>
+        </nav>
+    </section>
+    <!--content section-->
+    <section id="content-section">
+        <!--Control Panel Section-->
+        <section id="control-section" class="dark-bg">
+            <div id="control-panel">
+                <div class="control-button" onclick="browseMain('1')">
+                    <img src="images/add_en.png" alt="img">
+                    Upload New Images
+                </div>
+                <div class="control-button" onclick="browseMain('2')">
+                    <img src="images/edit_en.png" alt="img">
+                    Edit existing Images
+                </div>
+                <div class="control-button" onclick="browseMain('3')">
+                    <img src="images/view_en.png" alt="img">
+                    View Recieved Enquiries
+                </div>
+            </div>
+        </section>
+        <!--Main Panel-->
+        <section class="dark-bg" id="task-pane">
+            <div class="main" id="main1">
+                <h1>Drop your Image here</h1>
+                <!--Image Uploader Form-->
+                <form id="uploadForm" enctype="multipart/form-data" action="upload.php" method="POST">
+                    <input type="file" name="imgSelecter" id="imgSelecter">
+                    <span style="width: 100%;">
+                        <input type="submit" value="Upload" id="uploadBtn">
+                    </span>
+                </form>
+                <!--Image Display-->
+                <img src="" alt="Selected Image will be displayed here" id="selectedImage">
+            </div>
+            <div class="main" id="main2">
+                <h1>Remove Images from Gallery</h1>
+                <!--Image Deletion Form-->
+                <div id="deleteImages">
+                    <select name="selectImagetoDelete" id="selectImagetoDelete">
+                        <option value="1">First Option</option>
+                        <option value="1">Second Option</option>
+                        <option value="1">Third Option</option>
+                        <option value="1">Forth Option</option>
+                        <option value="1">Fifth Option</option>
+                    </select>
+                    <button id="deletebtn" onclick="verifyDeletion()">
+                        Delete
+                    </button>
+                </div>
+            </div>
+            <div class="main" id="main3">
+                <h1>All Enquiries</h1>
+            </div>
+        </section>
+    </section>
+    <!--Footer-->
+    <section id="footer-section">
+        <footer class="dark-bg foot">
+            <div class="foot-links">
+                <ul>
+                    <li>About Me</li>
+                    <li>Testimonials</li>
+                    <li>Gallery</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div class="social">
+                <ul>
+                    <li>follow us on social media</li>
+                    <li><img src="images/fb.png" alt="fb"></li>
+                    <li><img src="images/insta.png" alt="insta"></li>
+                    <li><img src="images/lkdin.png" alt="lkdin"></li>
+                </ul>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>
