@@ -68,6 +68,7 @@ nav{
     height: 70px;
     justify-content: space-between;
     padding-top: 20px;
+    z-index: 3;
 }
 nav ul{
     display: flex;
@@ -154,6 +155,7 @@ nav ul li:hover{
 }
 #logo img{
     width: 80%;
+    z-index: 3;
 }
 #logo h1{
     font-size: 30px;
@@ -163,38 +165,44 @@ nav ul li:hover{
 /*=========*/
  /*banner*/
 /*=========*/
-#title{
-    width: 100%;
-    height: 60px;
+#banner-body{
     display: flex;
-    align-items: end;
+    justify-content: space-between;
+    height: 100%;
+    z-index: 1;
 }
-#title h2{
+#left-banner,#right-banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+    max-height: 100%;
+}
+#left-banner{
+    max-height: calc(450px - 90px);
+}
+#left-banner h1,#left-banner h2{
+    width: fit-content;
     margin-left: 60px;
+}
+#left-banner h2{
     font-family: Charmonman;
     font-weight: 200;
 }
-#self{
-    display: flex;
-    justify-content: space-evenly;
-    height: 300px;
-}
-#name{
-    width: 600px;
-    margin-left: -50px;
-    height: fit-content;
-}
-#name h1{
+#left-banner h1{
     font-family: Thasadith,serif;
     font-size: 100px;
     font-weight: 100;
-    width: fit-content;
     color: #D48D99;
-    text-shadow: 3px 3px #000;
 }
-#self img{
-    height: 470px;
-    width: 470px;
+#right-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#right-banner img{
+    width: 70%;
+    aspect-ratio:1/1;
     object-fit: cover;
     border-radius: 100%;
 }
@@ -218,6 +226,7 @@ nav ul li:hover{
     width: 50%;
     height: 450px;
     margin-left: 35px;
+    overflow-y: hidden;
 }
 .about-content{
     display: flex; 
@@ -349,6 +358,7 @@ nav ul li:hover{
     width: 100%;
     height: 100%;
     position: absolute;
+    object-fit: cover;
     top: 0;
     left: 0;
     opacity: 0;
@@ -440,8 +450,13 @@ nav ul li:hover{
 /*--------------*/
 /*sign children*/
 /*--------------*/
+.signup{
+    width: 30%;
+}
+.packages{
+    width: 70%;
+}
 .signup,.packages{
-    width: 50%;
     height: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -476,13 +491,13 @@ nav ul li:hover{
 }
 #pack-carousel{
     height: 300px;
-    width: fit-content;
+    width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 .arrow{
     height: 80px;
-    width:50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -496,7 +511,7 @@ nav ul li:hover{
     align-items: center;
 }
 .pack{
-    height: 200px;
+    height: 65%;
     width: 150px;
     background-color: #fff;
     border-radius: 15px;
@@ -937,4 +952,120 @@ nav ul li:hover{
     flex-direction: column;
     gap: 1em;
     align-items: center;
+}
+/*===================================================================================*/
+                                    /*MEDIA QUERIES*/
+/*===================================================================================*/
+/*4 about*/
+@media (max-width: 1023px) {
+    .about-para,.about-boast div p{
+        font-size: medium;
+        margin: 0%;
+    }
+    .about{
+        height: fit-content;
+        padding: 2%;
+    }
+    .about-content{
+        height: 100%;
+        position: relative;
+        top: 0;
+        flex-direction: column;
+    }
+    .about-container{
+        height: 100%;
+    }
+    .about-para{
+        width: 100%;
+        height: fit-content;
+        text-align: center;
+    }
+    .about-boast{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+    .boast-item img{
+        transform: scale(.75);
+    }
+    .seperator{
+        display: none;
+    }
+
+}
+/*4 banner-body*/
+@media (max-width: 790px) {
+    #banner-body{
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner{
+        height: fit-content;
+    }
+    #left-banner h1,#left-banner h2{
+        margin: 0%;
+        font-size: 3em;
+    }
+    #left-banner h2{
+        font-size: 1em;
+    }
+}
+
+/*4 card carousel in about*/
+@media (max-width: 819px) {
+    .sign{
+        flex-direction: column;
+    }
+    .packs{
+        flex-direction: column;
+    }
+    .pack:not(:nth-child(2)){
+        transform: none;
+    }
+}
+/*4 footer, nav, banner*/
+@media (max-width: 600px) {
+    .foot{
+        flex-direction: column;
+    }
+    .foot-links,.social,.foot{
+        width: 100%;
+    }
+    .banner{
+        height: fit-content;
+    }
+    nav{
+        align-items: center;
+        height: fit-content;
+        justify-content: flex-start;
+    }
+    nav,.nav-ul{
+        width: 100%;
+        margin: 0%;
+        
+        flex-direction: column;
+    }
+    .nav-ul{
+        height: 25em;
+        display: none;
+    }
+    .nav-ul li{
+        width: 80%;
+    }
+    .nav-ul li:hover{
+        .subnav{
+            position:absolute;
+            top: 480px;
+            height: fit-content;
+        }
+        .subnav ul,.subnav ul li{
+            margin: 0%;
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 360px) {
+    #sign-body{
+        transform: scale(.75);
+    }
 }

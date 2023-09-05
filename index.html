@@ -14,9 +14,9 @@
         <div class="dark-bg banner">
             <nav>
                 <div id="logo">
-                    <img src="images/logo.png" alt="logo">
+                    <img src="images/logo.png" alt="logo" onclick="navToggler()">
                 </div>
-                <ul>
+                <ul class="nav-ul" id="nav">
                     <li onclick="location.href = 'index.html';">Home</li>
                     <li>Services
                         <i class="fa fa-caret-down"></i>
@@ -38,32 +38,32 @@
                             </ul>
                         </div>
                     </li>
-                    <li onclick="window.location.href='sign.html'">Sign In</li>
+                    <li onclick="window.location.href='login.html'">Sign In</li>
                 </ul>
             </nav>
-            <div id="title">
-                <h2>Photographer</h2>
-            </div>
-            <div id="self">
-                <div id="name">
-                    <h1>Malcome</h1>
-                    <h1>Lismore</h1>    
+            <div id="banner-body">
+                <div id="left-banner">
+                    <h2>Photographer</h2>
+                    <h1>Malcolme</h1>
+                    <h1>Lismore</h1>
                 </div>
-                <img src="images/portrait.png" alt="">    
+                <div id="right-banner">
+                    <img src="images/portrait.png" alt="err">
+                </div>
             </div>
         </div>
     </section>
     <section id="about-section">
         <div class="light-bg about">
-            <div>
+            <div class="about-container">
                 <h1 class="about-head">About Me...</h1>
                 <div class="about-content">
                     <p class="about-para">I am a freelance photographer located on the North West coast of Scotland. My greatest passion in photography lies in capturing the beauty of the natural world. I offer a variety of images showcasing the rugged Scottish landscape, the fascinating wildlife, and the charming coastal birds. Nonetheless, my interests extend beyond landscape and wildlife photography. Similar to many photographers, I am available for hire to cover weddings, create portraits, and capture special events.</p>    
                     <div class="seperator"></div>
                     <div class="about-boast">
-                        <div><p>Capturer of about 900+ Photographs</p><img src="images/photo.png" alt="photo"></div>
-                        <div><p>Hired by 300+ Customers</p><img src="images/cus.png" alt="customer"></div>
-                        <div><p>15+ Awards Won</p><img src="images/trophy.png" alt="trophy"></div>
+                        <div class="boast-item"><p>Capturer of about 900+ Photographs</p><img src="images/photo.png" alt="photo"></div>
+                        <div class="boast-item"><p>Hired by 300+ Customers</p><img src="images/cus.png" alt="customer"></div>
+                        <div class="boast-item"><p>15+ Awards Won</p><img src="images/trophy.png" alt="trophy"></div>
                     </div>
                 </div>
             </div>

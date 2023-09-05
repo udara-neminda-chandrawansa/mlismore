@@ -146,3 +146,17 @@ function verifyDeletion(){
     alert("Didn't Delete !");
   }
 }
+
+function navToggler(){
+  const mediaQuery = window.matchMedia("(max-width: 600px)");
+
+// Check if the media query matches
+if (mediaQuery.matches) {
+  var nav = document.getElementById("nav");
+  var realNav = document.querySelector("nav");
+
+  if(nav.style.display!="none"){
+    nav.style.display="none";
+    realNav.style.height = "fit-content";
+  } else{nav.style.display="flex";realNav.style.height = "650px";}  
+}}
