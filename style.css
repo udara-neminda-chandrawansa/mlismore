@@ -956,6 +956,16 @@ nav ul li:hover{
 /*===================================================================================*/
                                     /*MEDIA QUERIES*/
 /*===================================================================================*/
+/*gallery images*/
+@media (max-width: 1146px) {
+    .gallery-images{
+        height: 270px;
+        width: 33.16%;
+        object-fit: cover;
+        border: none;
+        transition: .3s;
+    }
+}
 /*4 about*/
 @media (max-width: 1023px) {
     .about-para,.about-boast div p{
@@ -1005,6 +1015,15 @@ nav ul li:hover{
     }
     .arrow{
         display: none;
+    }
+}
+@media (max-width: 700px) {
+    .gallery-images{
+        height: 270px;
+        width: 100%;
+        object-fit: cover;
+        border: none;
+        transition: .3s;
     }
 }
 /*4 banner-body*/
