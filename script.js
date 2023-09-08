@@ -24,35 +24,17 @@ function babayaga(arr){
   }
 }
 
-// function to create accs
+// Go back button (php files)
 
-function createAcc(){
-  var usr = document.getElementById('username').value;
-  var psw = document.getElementById('password').value;
+document.addEventListener("DOMContentLoaded", function() {
+  const goBackButton = document.getElementById('goBackButton');
 
-  if(psw.length > 1){
-    alert("Account Creation Success " + usr + " !");
-  }
-}
+  goBackButton.addEventListener('click', function() {
+      window.history.back(); // Go back to the previous page
+  });
+});
 
-// function to verify login accs
-
-function verifyAcc() {
-  var usr = document.getElementById('username').value;
-  var psw = document.getElementById('password').value;
-
-  if (usr == "admin" && psw == "123") {
-    window.location.href = "admin_dash.html";
-  }
-  else if (usr == "udara" && psw == "123") {
-    window.location.href = "cus_dash.html";
-  }
-  else {
-    alert("Login Unsuccessful !");
-  }
-}
-
-// function to browse through main panels
+// function to browse through main panels (dashboards)
 
 function browseMain(mainN){
   var main1 = document.getElementById('main1');
@@ -76,7 +58,7 @@ function browseMain(mainN){
   }
 }
 
-// function to display selected images
+// function to display selected images when uploading(admin dashboard)
 document.addEventListener("DOMContentLoaded", function() {
   const imgSelecter = document.getElementById('imgSelecter');
   const selectedImage = document.getElementById('selectedImage');
@@ -99,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-// function to zoom clicked images in Gallery
+// function to zoom clicked images (Gallery)
 document.addEventListener("DOMContentLoaded", function() {
 
   // select all gallery-images to a const
@@ -133,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-// function to delete images from gallery [admin]
+// function to delete images from gallery [admin dash]
 function verifyDeletion(){
   const userResponse = confirm("Are you sure to delete this image from your Gallery ?");
 
@@ -147,16 +129,38 @@ function verifyDeletion(){
   }
 }
 
-function navToggler(){
+// function to toggle nav visibility (all)
+
+function navToggler(pagename){
   const mediaQuery = window.matchMedia("(max-width: 600px)");
 
 // Check if the media query matches
-if (mediaQuery.matches) {
+if (mediaQuery.matches && pagename == "index") {
   var nav = document.getElementById("nav");
   var realNav = document.querySelector("nav");
+  var banner = document.getElementById("banner-body");
 
-  if(nav.style.display!="none"){
-    nav.style.display="none";
+  if(nav.style.display=="none"){
+    realNav.style.height = "650px";
+    nav.style.display="flex";
+    banner.style.display = "none";
+  } else{
     realNav.style.height = "fit-content";
-  } else{nav.style.display="flex";realNav.style.height = "650px";}  
-}}
+    nav.style.display="none";
+    banner.style.display = "flex";
+  }
+}else if(mediaQuery.matches){
+  var nav = document.getElementById("nav");
+  var realNav = document.querySelector("nav");
+  var nav_sec = document.getElementById("nav-section");
+
+  if(nav.style.display=="none"){
+    realNav.style.height = "650px";
+    nav.style.display="flex";
+    nav_sec.style.height = "100vh";
+  } else{
+    realNav.style.height = "fit-content";
+    nav.style.display="none";
+    nav_sec.style.height = "fit-content";
+  }}
+}

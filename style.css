@@ -285,7 +285,7 @@ nav ul li:hover{
 #mid-head{
     font-family: Courgette,sans-serif;
     font-weight: 300;
-    font-size: 40px;
+    font-size: 300%;
     height: fit-content;
     width: fit-content;
     position: relative;
@@ -933,7 +933,7 @@ nav ul li:hover{
 /*============*/
   /*php file*/
 /*============*/
-#phpBody{
+.phpBody{
     height: 100vh;
     background-color: #0F131F;
     color: #D48D99;
@@ -991,7 +991,21 @@ nav ul li:hover{
     .seperator{
         display: none;
     }
-
+    #star1,#star2,#star3,.picinfo{
+        display: none;
+    }
+    #mid-head{
+        transform: translate(50%,-50%);
+    }
+}
+/*4 card carousel in about*/
+@media (max-width: 819px) {
+    .sign{
+        flex-direction: column;
+    }
+    .arrow{
+        display: none;
+    }
 }
 /*4 banner-body*/
 @media (max-width: 790px) {
@@ -1000,7 +1014,10 @@ nav ul li:hover{
         align-items: center;
     }
     .banner{
-        height: fit-content;
+        height: 100vh;
+    }
+    #right-banner img{
+        padding-bottom: 25px;
     }
     #left-banner h1,#left-banner h2{
         margin: 0%;
@@ -1009,18 +1026,11 @@ nav ul li:hover{
     #left-banner h2{
         font-size: 1em;
     }
-}
-
-/*4 card carousel in about*/
-@media (max-width: 819px) {
-    .sign{
-        flex-direction: column;
+    #car-buttons{
+        display: none;
     }
-    .packs{
-        flex-direction: column;
-    }
-    .pack:not(:nth-child(2)){
-        transform: none;
+    #carousel{
+        transform: translate(-10%,20%);
     }
 }
 /*4 footer, nav, banner*/
@@ -1031,41 +1041,94 @@ nav ul li:hover{
     .foot-links,.social,.foot{
         width: 100%;
     }
-    .banner{
-        height: fit-content;
-    }
     nav{
         align-items: center;
         height: fit-content;
         justify-content: flex-start;
     }
-    nav,.nav-ul{
+    nav,#nav{
         width: 100%;
-        margin: 0%;
-        
+        margin: 0%;        
         flex-direction: column;
     }
-    .nav-ul{
+    nav ul{
         height: 25em;
         display: none;
     }
-    .nav-ul li{
+    nav ul li{
         width: 80%;
     }
-    .nav-ul li:hover{
+    nav ul li:hover{
+        background-color: transparent;
+        border: 1px solid transparent;
+        color: transparent;
+        .fa-caret-down{
+            color: transparent;
+        }
         .subnav{
-            position:absolute;
-            top: 480px;
-            height: fit-content;
-        }
-        .subnav ul,.subnav ul li{
+            position:relative;
+            top: 35%;
+            left: 45%;
+            transform: translate(-50%,-50%);
+            height: inherit;
+            width: fit-content;
+            padding: 0%;
             margin: 0%;
-            width: 100%;
         }
+        .subnav ul{
+            flex-direction: row;
+            margin: 0%;
+            height: fit-content;
+            width: 100%;
+            padding: 0%;
+        }
+        .subnav ul li{
+            margin: 0%;
+            padding: 0%;
+            width: 100px;
+            height: fit-content;
+            transform: scale(.8);
+        }
+        .subnav ul li:hover{
+            color: white;
+            border: 1px solid white;
+        }
+    }
+    #mid-head{
+        transform: translate(50%,-50%)scale(.7);
+    }
+}
+/*510*/
+@media (max-width: 510px) {
+    .sign{
+        height: 150vh;
+    }
+    .signup{
+        height: 50vh;
+    }
+    .packages{
+        display: flex;
+        gap: 1em;
+        height: 100%;
+    }
+    #pack-carousel{
+        justify-content: end;
+    }
+    .packs{
+        flex-direction: column;
+        gap: 1em;
+        height: fit-content;
+    }
+    .pack:not(:nth-child(2)){
+        transform: none;
+        filter: none;
+    }
+    .pack:nth-child(2){
+        transform: none;
     }
 }
 @media (max-width: 360px) {
-    #sign-body{
+    #sign-form{
         transform: scale(.75);
     }
 }

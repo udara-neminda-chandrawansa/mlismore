@@ -14,9 +14,9 @@
         <div class="dark-bg banner">
             <nav>
                 <div id="logo">
-                    <img src="images/logo.png" alt="logo" onclick="navToggler()">
+                    <img src="images/logo.png" alt="logo" onclick="navToggler('index')">
                 </div>
-                <ul class="nav-ul" id="nav">
+                <ul id="nav">
                     <li onclick="location.href = 'index.html';">Home</li>
                     <li>Services
                         <i class="fa fa-caret-down"></i>
@@ -70,11 +70,20 @@
         </div>
     </section>
     <section id="mid-section">
-        <div class="dark-bg mid">
-            <img src="images/Star 1.png" alt="star" id="star1">
-            <img src="images/Star 2.png" alt="star" id="star2">
-            <img src="images/Star 3.png" alt="star" id="star3">
-            <h1 id="mid-head">the beauty of nature captured...</h1>
+        <div class="dark-bg mid"> <!--parent div-->
+            <div class="star-container"> <!--star div-->
+                <img src="images/Star 1.png" alt="star" id="star1">
+                <img src="images/Star 2.png" alt="star" id="star2">
+                <img src="images/Star 3.png" alt="star" id="star3">    
+            </div>
+            <div class="text-container">
+                <h1 id="mid-head">the beauty of nature captured...</h1>
+                <div class="picinfo">
+                    <p class="active">European Hummingbird</p>
+                    <p>Sri Lankan Kingfisher</p>
+                    <p>British Puffin</p>
+                </div>    
+            </div>
             <div id="carousel">
                 <img src="images/Hummingbird.png" alt="carousel image" class="active">
                 <img src="images/fishmonger.jpeg" alt="carousel image">
@@ -84,11 +93,6 @@
                     <div></div>
                     <div></div>    
                 </div>
-            </div>
-            <div class="picinfo">
-                <p class="active">European Hummingbird</p>
-                <p>Sri Lankan Kingfisher</p>
-                <p>British Puffin</p>
             </div>
         </div>
     </section>

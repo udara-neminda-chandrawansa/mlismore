@@ -13,9 +13,9 @@
     <section id="nav-section" class="light-bg">
         <nav id="dark-nav">
             <div id="logo">
-                <img src="images/logo.png" alt="logo" style="filter:drop-shadow(1px 1px 1px #000);" onclick="navToggler()">
+                <img src="images/logo.png" alt="logo" style="filter:drop-shadow(1px 1px 1px #000);" onclick="navToggler('')">
             </div>
-            <ul class="nav-ul" id="nav">
+            <ul id="nav">
                 <li onclick="location.href = 'index.html';">Home</li>
                 <li>Services
                     <i class="fa fa-caret-down" id="dark-caret-down"></i>
@@ -43,21 +43,27 @@
     </section>
     <!--Sign Section-->
     <section id="sign">
-        <div id="sign-body" class="dark-bg">
-            <h1 id="sign-title">Create a new account</h1>
-            <span class="sign-label">
-                <p>Username</p>
-            </span>            
-            <input type="text" name="username" id="username" placeholder="Enter your username">
-            <span class="sign-label">
-                <p>Password</p>
-            </span>            
-            <input type="password" name="password" id="password" placeholder="Enter your password">
-            <button type="submit" onclick="createAcc()">Sign Up</button>
-            <span id="sign-links">
-                <a href="login.html">already have an account..?</a>
-            </span>
-        </div>
+        <form action="dbcon.php" method="post" id="sign-form">
+            <div id="sign-body" class="dark-bg">
+                <!--Title-->
+                <h1 id="sign-title">Create a new account</h1>
+                <!--Label-->
+                <span class="sign-label"><p>Username</p></span>            
+                <!--Input-->
+                <input type="text" name="username" id="username" placeholder="Enter your username">
+                <!--Label-->
+                <span class="sign-label"><p>Password</p></span>            
+                <!--Input-->
+                <input type="password" name="password" id="password" placeholder="Enter your password">
+                <!--Page Name Holder-->
+                <input type="hidden" name="pagename" value="sign">
+                <!--Submit-->
+                <button type="submit">Sign Up</button>
+                <!--Anchor-->
+                <span id="sign-links"><a href="login.html">already have an account..?</a></span>
+            </div>
+        </form>
+        
     </section>
     <!--Footer-->
     <section id="footer-section">

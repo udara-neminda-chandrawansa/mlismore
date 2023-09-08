@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="website icon" href="images/portrait.png">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Image Upload Status | mlismore.com</title>
 </head>
-<body id="phpBody">
+<body class="phpBody">
     <?php
         $uploadDir = 'photos/'; // Directory to save the uploaded images
         $fname = basename($_FILES['imgSelecter']['name']); // filename
@@ -25,14 +26,5 @@
             echo "Upload failed.<button id='goBackButton'>Go Back</button>";
         }
     ?>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const goBackButton = document.getElementById('goBackButton');
-
-            goBackButton.addEventListener('click', function() {
-                window.history.back(); // Go back to the previous page
-            });
-        });
-    </script>
-</body>
+    </body>
 </html>
