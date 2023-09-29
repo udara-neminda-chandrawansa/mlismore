@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="website icon" href="images/portrait.png">
+    <script src="script.js"></script>
+    <title>Photography at its finest | mlismore.com</title>
+</head>
+<style>
+    #contact{
+        min-height: calc(100vh - 90px);
+        font-family: Thasadith, 'Arial Narrow', Arial, sans-serif;
+        font-size: large;
+        text-align: justify;
+        padding: 0px 30px 0px 30px;
+    }
+    .spacer{
+        height: 25px;
+    }
+    .contact-h1{
+        color: #D48D99;filter: drop-shadow(1px 1px 1px #fff);
+    }
+    .contact-container{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    .p-container{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin-top: 1em;
+    }
+    .p-container a{
+        color: #0F131F;
+        font-weight: 900;
+    }
+
+    .contactForm{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin-top: 1em;
+    }
+    .contactForm input,.contactForm textarea{
+        width: 300px;
+        border-radius: 2px;
+        padding: 2px;
+        border: none;
+        outline: none;
+        font-family: Poppins,serif;
+        color: #000;
+    }
+
+    .contact_btn:hover{
+        border-bottom: 5px solid #80788D;
+    }
+
+</style>
+<body>
+    <!--nav section-->
+    <section id="nav-section" class="light-bg">
+        <nav id="dark-nav">
+            <div id="logo">
+                <img src="images/logo.png" alt="logo" style="filter:drop-shadow(1px 1px 1px #000);" onclick="navToggler('')">
+            </div>
+            <ul id="nav">
+                <li onclick="location.href = 'index.php';">Home</li>
+                <li>Services
+                    <i class="fa fa-caret-down" id="dark-caret-down"></i>
+                    <div class="subnav">
+                            <ul>
+                                <li onclick="window.location.href='services.html';">Weddings</li>
+                                <li onclick="window.location.href='services.html#portraits';">Portraits</li>
+                                <li onclick="window.location.href='services.html#events';">Social Events</li>
+                            </ul>
+                        </div>
+                </li>
+                <li>Gallery
+                    <i class="fa fa-caret-down" id="dark-caret-down"></i>
+                    <div class="subnav">
+                        <ul>
+                            <li onclick="window.location.href = 'gallery.html';">Landscape</li>
+                            <li onclick="window.location.href = 'gallery.html#wildlife-section';">Wildlife</li>
+                            <li onclick="window.location.href = 'gallery.html#birds-section';">Coastal Birds</li>
+                        </ul>
+                    </div>
+                </li>
+                <li onclick="window.location.href='login.html'">Sign In</li>
+            </ul>
+        </nav>
+    </section>
+    <!--contact Section-->
+    <section id="contact" class="light-bg">
+        <div class="spacer"></div>
+        <h1 class="contact-h1">Contact Us</h1>
+        <div class="contact-container">
+            <form action="dbcon.php" method="post" class="contactForm">
+                <input type="hidden" name="pagename" value="contacts">
+                <input type="email" name="email" id="email" placeholder="Provide your Email">
+                <textarea name="message" id="message" placeholder="Insert your message"></textarea>
+                <button class="dash_btn contact_btn" type="submit" onclick="return verifyMessageForm()">Send</button>
+            </form>
+            <div class="p-container">
+                <p>If you prefer to reach out to us directly, here's our contact information:</p>
+                <span style="display: flex;gap: 1em;">
+                    <p>Email : </p>
+                    <a href="mailto:mlismore@gmail.com">mlismore@gmail.com</a>
+                    <p>Tel No : </p>
+                    <a href="tel:+9455555555">Call +9455555555</a>
+                    <p>Address : </p>
+                    <p>123 Photography Street, Scenic City, SC 12345</p>
+                </span>
+            </div>
+        </div>
+    </section>
+    <section id="footer-section">
+    <footer class="dark-bg foot">
+        <div class="foot-links">
+            <ul>
+                <li onclick="window.location.href='about.html'">About Me</li>
+                <li onclick="window.location.href='testimonials.php'">Testimonials</li>
+                <li onclick="window.location.href='gallery.html'">Gallery</li>
+                <li onclick="window.location.href='contacts.html'">Contact Us</li>
+            </ul>
+        </div>
+        <div class="social">
+            <ul>
+                <li>follow us on social media</li>
+                <li onclick="window.location.href='https://www.facebook.com/'"><img src="images/fb.png" alt="fb"></li>
+                <li onclick="window.location.href='https://www.instagram.com/'"><img src="images/insta.png" alt="insta"></li>
+                <li onclick="window.location.href='https://www.linkedin.com/'"><img src="images/lkdin.png" alt="lkdin"></li>
+            </ul>
+        </div>
+    </footer>
+</section>
+<script>
+    function verifyMessageForm(){
+        const email = document.getElementById('email');
+        const message = document.getElementById('message');
+
+        return(email.value != "" && message.value != "");
+    }
+</script>
+</body>
+</html>

@@ -16,16 +16,16 @@
                 <img src="images/logo.png" alt="logo" onclick="navToggler('')">
             </div>
             <ul class="nav-ul" id="nav">
-                <li onclick="location.href = 'index.html';">Home</li>
+                <li onclick="location.href = 'index.php';">Home</li>
                 <li>Services
                     <i class="fa fa-caret-down"></i>
                     <div class="subnav">
-                        <ul>
-                            <li>Weddings</li>
-                            <li>Portraits</li>
-                            <li>Social Events</li>
-                        </ul>
-                    </div>
+                            <ul>
+                                <li onclick="window.location.href='services.html';">Weddings</li>
+                                <li onclick="window.location.href='services.html#portraits';">Portraits</li>
+                                <li onclick="window.location.href='services.html#events';">Social Events</li>
+                            </ul>
+                        </div>
                 </li>
                 <li>Gallery
                     <i class="fa fa-caret-down"></i>
@@ -44,104 +44,38 @@
     <button id="top" onclick="window.location.href = 'gallery.html#nav-section';"><i class="fa fa-caret-up"></i></button>
     <section id="landscape-section" class="dark-bg">
         <h1 class="gallery-heading">Landscape Photography</h1>
-        <div style="height: fit-content;" id="landscape">
-            <img src="https://www.dpreview.com/files/p/articles/7961724650/Lesson-4-Yarra-Ranges-Road-Black-Spur-Mountain-Ash.jpeg" alt="img" class="gallery-images">
-            <img src="https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg"  alt="img" class="gallery-images">
-            <img src="https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png"  alt="img" class="gallery-images">
-            <img src="https://expertphotography.b-cdn.net/wp-content/uploads/2017/08/AK-WragellStEliasPark-NabesnaRoad-July2006-10-1.jpg"  alt="img" class="gallery-images">
-            <img src="https://static.bhphotovideo.com/explora/sites/default/files/03-shutterstock_97696616.jpg"  alt="img" class="gallery-images">
-            <img src="https://photographylife.com/wp-content/uploads/2016/06/Mass.jpg"  alt="img" class="gallery-images">
-            <img src="https://images.unsplash.com/photo-1604430456280-43f652c497aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFuZHNjYXBlJTIwcGhvdG9ncmFwaHl8ZW58MHx8MHx8fDA%3D&w=1000&q=80"  alt="img" class="gallery-images">
-            <img src="https://cdn.naturettl.com/wp-content/uploads/2020/04/25152036/how-to-find-great-locations-for-landscape-photography-11-900x600.jpg"  alt="img" class="gallery-images">
-            <img src="https://images.unsplash.com/photo-1544954617-f5c6b0d16164?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGFuZHNjYXBlJTIwcGhvdG9ncmFwaHl8ZW58MHx8MHx8fDA%3D&w=1000&q=80"  alt="img" class="gallery-images">
-            <img src="https://media.photographycourse.net/wp-content/uploads/2014/11/08164934/Landscape-Photography-steps.jpg"  alt="img" class="gallery-images">
-            <img src="https://expertphotography.b-cdn.net/wp-content/uploads/2022/05/Landscape-Photography-Sophie-Turner.jpg"  alt="img" class="gallery-images">
-            <img src="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fec8d1c9a-2b43-11eb-b054-8dc1447a1be1.jpg?crop=3980%2C2653%2C5%2C242"  alt="img" class="gallery-images">
-            <img src="https://i1.adis.ws/i/canon/get-inspired-landscape-photography-tips-1-16.9_e7ae10efb78c4526801d6037f80ab177"  alt="img" class="gallery-images">
-            <img src="https://hdrphotos.com/wp-content/uploads/2021/03/Spirit-Island-4k-RGB-2.jpg"  alt="img" class="gallery-images">
-            <img src="https://artisanhd.com/wp-content/uploads/2018/08/landscape-photography-blog-main-artisanhd.jpg"  alt="img" class="gallery-images">
-            <img src="https://www.photographytalk.com/images/articles/2018/12/03/articles/2017_8/improve_landscape_photography-1.jpg"  alt="img" class="gallery-images">
-            <img src="https://www.lukas-petereit.com/wp-content/uploads/2017/10/Rakotzbr%C3%BCcke-Bridge-Rakotz-Kromlau-Lake-Sun-Sunrise-Landscape-Reflection-Germany-Saxony-Travel-Photography-Nature-Photo-Spreewald-2.jpg"  alt="img" class="gallery-images">       
-        </div>
+        <div style="height: fit-content;" id="landscape"><!--Image Container--></div>
+        <script src="landscape_image_returner.js"></script><!--AJAX Connectivity-->
     </section>
     <section id="wildlife-section" class="light-bg">
         <h1 class="gallery-heading">Wildlife Photography</h1>
-        <div style="height: fit-content;" id="wildlife">
-            <img src="https://www.format.com/wp-content/uploads/emily_mesner_wildlife_photography-1.jpg"  alt="img" class="gallery-images">
-            <img src="https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/8/2023/05/CLI406.wildlife_photography_awards.SleepingWithDandelionsLewisNewmanBritishWildlifePhotographyAwards.jpg"  alt="img" class="gallery-images">
-            <img src="https://www.cnet.com/a/img/resize/6a960ec12fb18381694ca007cb8e58317466157e/hub/2022/10/20/0680a372-d35f-4a6b-93e1-29bbbc2eb3c4/1-alex-pansier-jumping-jack-00003301.jpg?auto=webp&fit=crop&height=360&width=640"  alt="img" class="gallery-images">
-            <img src="https://camranger.com/wp-content/uploads/2021/05/Oosterhout.jpg"  alt="img" class="gallery-images">
-            <img src="https://petapixel.com/assets/uploads/2015/12/fox_family16.jpg"  alt="img" class="gallery-images">
-            <img src="https://cdn.theatlantic.com/media/img/photo/2019/10/winners-of-the-wildlife-photographe/w01_Bao-1/original.jpg"  alt="img" class="gallery-images">
-            <img src="https://static-cse.canva.com/blob/563934/00_01verzosa_feat_contrib_MatthewGibson.0e5b354a.jpg"  alt="img" class="gallery-images">
-            <img src="https://www.sundaytimes.lk/131229/uploads/elusive-13.jpg"  alt="img" class="gallery-images">
-            <img src="https://image.benq.com/is/image/benqco/Creating%20Intimate%20Wildlife%20Photographs?$ResponsivePreset$"  alt="img" class="gallery-images">
-            <img src="https://images.unsplash.com/photo-1575550959106-5a7defe28b56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2lsZGxpZmV8ZW58MHx8MHx8fDA%3D&w=1000&q=80"  alt="img" class="gallery-images">
-            <img src="https://cdn.naturettl.com/wp-content/uploads/2016/01/22014929/Puffin-1.jpg"  alt="img" class="gallery-images">
-            <img src="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F163a6ebe-47cf-11ec-9969-911e63457092.jpg?crop=4077%2C2718%2C31%2C46"  alt="img" class="gallery-images">
-            <img src="https://sinwp.com/assets/member/Gary-Davis-ASINWP.jpg"  alt="img" class="gallery-images">
-            <img src="https://i1.adis.ws/i/canon/get-inspired-wildlife-photography-tips-1-16.9-new_deabd144184a4e6ebe719a8a8d7e5045?$hero-header-half-16by9-dt-jpg$"  alt="img" class="gallery-images">
-            <img src="https://www.nikon.com.au/media/News/2022-08-19/shannon-wild/cheetah-cubs-shannon-wild-photography-guide-nikon-cameras-lenses-accessories.jpg"  alt="img" class="gallery-images">
-            <img src="https://images.immediate.co.uk/production/volatile/sites/23/2023/03/ADULT-A-Look-to-the-Future-524a44a.jpg?quality=90&resize=980,654"  alt="img" class="gallery-images">
-            <img src="https://wallpaperaccess.com/full/2251380.jpg"  alt="img" class="gallery-images">
-            <img src="https://www.sea.museum/-/media/anmm/images/whats-on/exhibitions/wildlife-photographer-of-the-year/2021-images/images/hannah-vijayan_2160x1080.jpg?h=600&la=en&mw=1920&w=1200"  alt="img" class="gallery-images">
-            <img src="https://www.klaustiedge.com/wp-content/uploads/T7-MM-18-_G4I5959-2_4_RE-CORRECTED_small-600x323.jpg"  alt="img" class="gallery-images">
-            <img src="https://media.cnn.com/api/v1/images/stellar/prod/221020092603-02-comedy-wildlife-photo-awards.jpg?c=original&q=h_618,c_fill"  alt="img" class="gallery-images">
-            <img src="https://i.insider.com/5bf2a2d548eb121808422f62?width=600&format=jpeg&auto=webp"  alt="img" class="gallery-images">
-            <img src="https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2023/04/wildlife-photography-mistakes.jpg"  alt="img" class="gallery-images">
-            <img src="https://static.boredpanda.com/blog/wp-content/uploads/2019/02/wildlife-photos-austrian-photographer-julian-rad-fb1.png"  alt="img" class="gallery-images">
-        </div>
+        <div style="height: fit-content;" id="wildlife"><!--Image Container--></div>
+        <script src="wildlife_image_returner.js"></script><!--AJAX Connectivity-->
     </section>
     <section id="birds-section" class="dark-bg">
         <h1 class="gallery-heading">Coastal Bird Photography</h1>
-        <div style="height: fit-content;" id="birds">
-            <img src="https://images.unsplash.com/photo-1514359453803-d59caf6c1cf0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2VhJTIwYmlyZHN8ZW58MHx8MHx8fDA%3D&w=1000&q=80"  alt="img" class="gallery-images">
-            <img src="https://cdn.naturettl.com/wp-content/uploads/2018/05/22005242/seabird-photography-tips-tutorial-12-900x600.jpg"  alt="img" class="gallery-images">
-            <img src="https://www.naturescapes.net/images/articles/201203/abe-borker-seabirds-04.jpg"  alt="img" class="gallery-images">
-            <img src="https://images.unsplash.com/photo-1613054128973-469c2f81f04f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmlyZHMlMjBmbHlpbmclMjBvdmVyJTIwb2NlYW58ZW58MHx8MHx8fDA%3D&w=1000&q=80"  alt="img" class="gallery-images">
-            <img src="https://www.picturecorrect.com/wp-content/uploads/2018/07/better-beach-bird-photography-tips-5.jpg"  alt="img" class="gallery-images">
-            <img src="https://images.squarespace-cdn.com/content/v1/5c33fb39f93fd4ca7d897b36/1635906811803-28MBP6VSYHI5OTY2T0H1/black-skimmer-skimming-nickerson-beach-long-island-ny-bird-photography-greg-gard-0805.jpg?format=2500w"  alt="img" class="gallery-images">
-            <img src="https://images.squarespace-cdn.com/content/v1/5c33fb39f93fd4ca7d897b36/1635906812708-0CEZPXVL294LM7CXS5MN/common-tern-fishing-nickerson-beach-long-island-ny-bird-photography-greg-gard-1523.jpg?format=2500w"  alt="img" class="gallery-images">
-            <img src="https://storage.googleapis.com/oceanwide_web/media-dynamic/cache/widen_1100_progressive/media/default/0001/42/9ca38c6ba5323adc99f7f0326bc47eb5d191c281.jpeg"  alt="img" class="gallery-images">
-            <img src="https://luminescentphoto.com/blog/wp-content/uploads/2019/11/JPO_20190210_1104-640x426.jpg"  alt="img" class="gallery-images">
-            <img src="https://images.squarespace-cdn.com/content/v1/5c33fb39f93fd4ca7d897b36/1635906817694-GL9T0K4SV458LUY5544K/least-tern-chicks-nickerson-beach-new-york-bird-photography-greg-gard-8629.jpg?format=2500w"  alt="img" class="gallery-images">
-            <img src="https://www.keywestaquarium.com/wp-content/uploads/2017/02/brown-pelican.jpg"  alt="img" class="gallery-images">
-            <img src="https://media.istockphoto.com/id/534050814/photo/seagulls.jpg?s=612x612&w=0&k=20&c=2yXoBaxeqmNkmkb5S6jEvG_MUVMbX1_xfC_97jfiWaI="  alt="img" class="gallery-images">
-            <img src="https://render.fineartamerica.com/images/images-profile-flow/400/images-medium-large-5/seagulls-in-flight-at-north-padre-olga-melhiser-photography.jpg"  alt="img" class="gallery-images">
-            <img src="https://www.ephotozine.com/articles/marine-animals-and-sea-bird-photography-11853/images/eider_flock.jpg"  alt="img" class="gallery-images">
-            <img src="https://cdn.naturettl.com/wp-content/uploads/2023/06/20170741/coastal-wildlife-2.jpg"  alt="img" class="gallery-images">
-            <img src="https://backcountrygallery.com/wp-content/uploads/2018/01/cormorant-running-to-water-bcg.jpg"  alt="img" class="gallery-images">
-            <img src="https://www.dnr.sc.gov/wildlife/species/coastalbirds/images/homepagepicture.jpg"  alt="img" class="gallery-images">
-            <img src="https://media.audubon.org/web_apa-2017_black-skimmer_a1_3701_5_melissa-james_kk_0.jpg"  alt="img" class="gallery-images">
-            <img src="https://static.vecteezy.com/system/resources/previews/005/285/344/large_2x/sunset-sea-bird-silhouette-sunset-silhouette-bird-flyinggraphy-sea-minimalgraphy-free-photo.JPG"  alt="img" class="gallery-images">
-            <img src="https://expertphotography.b-cdn.net/wp-content/uploads/2018/09/camera-settings-bird-photography-flock-birds-resting-coast-sea-rocks.jpg"  alt="img" class="gallery-images">
-            <img src="https://royalstockphoto.s3.amazonaws.com/wp-content/uploads/2015/02/x251x-Kingfisher-at-Beach-Bird-Photography1.jpg"  alt="img" class="gallery-images">
-            <img src="https://cds.chinadaily.com.cn/dams/capital/image/202107/13/60ece6f9e4b0f33f15169e99.jpeg"  alt="img" class="gallery-images">
-            <img src="https://www.floridarambler.com/wp-content/uploads/2011/01/shark-valley-nps.jpg"  alt="img" class="gallery-images">
-            <img src="https://barbarashallue.typepad.com/.a/6a00e552a02fb48833017d42e51537970c-pi"  alt="img" class="gallery-images">
-            <img src="https://cdn.theatlantic.com/media/img/photo/2022/09/winners-bird-photographer-year-2022/a01_ow-1/original.jpg"  alt="img" class="gallery-images">
-            <img src="https://www.thespruce.com/thmb/Upr2do5H94cB_iV5nB1R9MgPSng=/3705x0/filters:no_upscale():max_bytes(150000):strip_icc()/types-of-seabirds-387306-hero-282d3bf1415c4d539f64ba99c78a74ca.jpg"  alt="img" class="gallery-images">
-            <img src="https://www.gorillatrips.net/wp-content/uploads/2020/07/kenya-bird-watching-safari-img.jpg"  alt="img" class="gallery-images">
-        </div>
+        <div style="height: fit-content;" id="birds"><!--Image Container--></div>
+        <script src="bird_image_returner.js"></script><!--AJAX Connectivity-->
     </section>
     <section id="footer-section">
         <footer class="dark-bg foot">
             <div class="foot-links">
                 <ul>
-                    <li>About Me</li>
-                    <li>Testimonials</li>
-                    <li>Gallery</li>
-                    <li>Contact Us</li>
+                    <li onclick="window.location.href='about.html'">About Me</li>
+                    <li onclick="window.location.href='testimonials.php'">Testimonials</li>
+                    <li onclick="window.location.href='gallery.html'">Gallery</li>
+                    <li onclick="window.location.href='contacts.html'">Contact Us</li>
                 </ul>
             </div>
             <div class="social">
                 <ul>
                     <li>follow us on social media</li>
-                    <li><img src="images/fb.png" alt="fb"></li>
-                    <li><img src="images/insta.png" alt="insta"></li>
-                    <li><img src="images/lkdin.png" alt="lkdin"></li>
+                    <li onclick="window.location.href='https://www.facebook.com/'"><img src="images/fb.png" alt="fb"></li>
+                    <li onclick="window.location.href='https://www.instagram.com/'"><img src="images/insta.png" alt="insta"></li>
+                    <li onclick="window.location.href='https://www.linkedin.com/'"><img src="images/lkdin.png" alt="lkdin"></li>
                 </ul>
             </div>
         </footer>
     </section>
 </body>
+</html>

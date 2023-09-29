@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="website icon" href="images/portrait.png">
+    <script src="script.js"></script>
+    <title>Photography at its finest | mlismore.com</title>
+</head>
+<style>
+    .content-section{
+        height: 100vh;
+        font-family: Poppins,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 0px 1em;
+    }
+    #weddings{
+        height: calc(100vh - 90px);
+    }
+    .section-head{
+        height: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .service-div{
+        height: 90%;
+        overflow: hidden;
+        align-items: center;
+        gap: 1em;
+    }
+    .service-p{
+        width: 30%;
+        text-align: justify;
+    }
+    .service-img{
+        height: 90%;
+        border-radius: 1em;
+        object-fit: cover;
+    }
+    .service-img.landscape{
+        width: 70%;
+    }
+    .service-img.portrait{
+        width: 30%;
+    }
+    .b-w{
+        filter: grayscale();
+        transform: rotateY(180deg);
+    }
+    @media (max-width: 768px) {
+        .content-section{
+            height: fit-content;
+            
+        }
+        .flex-mobile{
+            flex-direction: column;
+            height: fit-content;
+            padding: 0%;
+        }
+        .flex-mobile *{
+            width: 100%;
+            padding: 0%;
+            z-index: 0;
+        }
+    }
+</style>
+<body>
+    <!--Nav-->
+    <section id="nav-section" class="dark-bg">
+        <nav>
+            <div id="logo">
+                <img src="images/logo.png" alt="logo" onclick="navToggler('')">
+            </div>
+            <ul class="nav-ul" id="nav">
+                <li onclick="location.href = 'index.php';">Home</li>
+                <li>Services
+                    <i class="fa fa-caret-down"></i>
+                    <div class="subnav">
+                            <ul>
+                                <li onclick="window.location.href='services.html';">Weddings</li>
+                                <li onclick="window.location.href='services.html#portraits';">Portraits</li>
+                                <li onclick="window.location.href='services.html#events';">Social Events</li>
+                            </ul>
+                        </div>
+                </li>
+                <li>Gallery
+                    <i class="fa fa-caret-down"></i>
+                    <div class="subnav">
+                        <ul>
+                            <li onclick="window.location.href = 'gallery.html';">Landscape</li>
+                            <li onclick="window.location.href = 'gallery.html#wildlife-section';">Wildlife</li>
+                            <li onclick="window.location.href = 'gallery.html#birds-section';">Coastal Birds</li>
+                        </ul>
+                    </div>
+                </li>
+                <li onclick="window.location.href='login.html'">Sign In</li>
+            </ul>
+        </nav>
+    </section>
+    <!--move to top btn-->
+    <button id="top" onclick="window.location.href = 'services.html#nav-section';"><i class="fa fa-caret-up"></i></button>
+    <!--Weddings-->
+    <section id="weddings" class="content-section dark-bg flex-mobile">
+        <h1 class="section-head">Weddings</h1>
+        <div class="flex service-div flex-mobile">
+            <p class="service-p">
+                Capture the timeless beauty of your special day with our exquisite wedding photography services. At Malcolm Lismore Photography, we understand that your wedding is a once-in-a-lifetime event filled with love, joy, and cherished moments. Our team of skilled photographers is dedicated to creating stunning visual narratives that beautifully reflect your unique love story. From capturing the tender glances to the heartfelt vows, we strive to document every precious detail, ensuring that your wedding photos will be treasured for generations to come. Let us be a part of your journey and turn your wedding day into a timeless work of art.
+            </p>
+            <img src="images/services/weddings.jpg" alt="" class="service-img landscape">
+        </div>
+    </section>
+    <!--Portraits-->
+    <section id="portraits" class="content-section light-bg flex-mobile">
+        <h1 class="section-head">Portraits</h1>
+        <div class="flex service-div justify-content-between flex-mobile">
+            <img src="images/services/portrait.jpg" alt="" class="service-img portrait">
+            <p class="service-p">
+                Transform moments into memories with our captivating portrait photography services. At Malcolm Lismore Photography, we specialize in capturing the essence of individuals and families in beautifully composed portraits. Whether you're celebrating a milestone, commemorating a special occasion, or simply seeking to capture your unique personality, our skilled photographers will work closely with you to create stunning, timeless portraits. With an eye for detail and a commitment to capturing your true self, we aim to provide you with portraits that radiate authenticity and tell your story in every frame. Let us turn your moments into art that you'll treasure for a lifetime.
+            </p>
+            <img src="images/services/portrait.jpg" alt="" class="service-img portrait b-w">
+        </div>
+    </section>
+    <!--Events-->
+    <section id="events" class="content-section dark-bg flex-mobile">
+        <h1 class="section-head">Special Events</h1>
+        <div class="flex service-div flex-mobile">
+            <img src="images/services/event.jpg" alt="" class="service-img landscape">
+            <p class="service-p">
+                Make your special occasions truly unforgettable with Malcolm Lismore Photography. We are passionate about capturing the magic of your unique events, whether it's a wedding, engagement, birthday, anniversary, or any other milestone. Our team of experienced photographers knows how to blend seamlessly into your event, ensuring that every important moment, emotion, and detail is beautifully preserved in photographs. With a keen eye for candid shots and a talent for capturing the essence of the moment, we're dedicated to providing you with a collection of images that will transport you back to the joy and excitement of your special day. Let us help you relive those cherished memories through the art of photography.
+            </p>
+        </div>
+    </section>
+    <!--Footer-->
+    <section id="footer-section">
+        <footer class="dark-bg foot">
+            <div class="foot-links">
+                <ul>
+                    <li onclick="window.location.href='about.html'">About Me</li>
+                    <li onclick="window.location.href='testimonials.php'">Testimonials</li>
+                    <li onclick="window.location.href='gallery.html'">Gallery</li>
+                    <li onclick="window.location.href='contacts.html'">Contact Us</li>
+                </ul>
+            </div>
+            <div class="social">
+                <ul>
+                    <li>follow us on social media</li>
+                    <li onclick="window.location.href='https://www.facebook.com/'"><img src="images/fb.png" alt="fb"></li>
+                    <li onclick="window.location.href='https://www.instagram.com/'"><img src="images/insta.png" alt="insta"></li>
+                    <li onclick="window.location.href='https://www.linkedin.com/'"><img src="images/lkdin.png" alt="lkdin"></li>
+                </ul>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>

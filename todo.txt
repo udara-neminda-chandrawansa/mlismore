@@ -3,17 +3,17 @@ Malcolm is looking for new ways to promote his business and has approached you t
 
 • A home page from which it is possible to navigate to the other resources in the website. The home page will need to quickly communicate the purpose of the site, be visually engaging and provide clear navigation to the rest of the site. (HOMEPAGE : DONE)
 
-• A page that provides basic information about Malcolm, his experiences and his passion for photography. (ABOUT : TODO)
+• A page that provides basic information about Malcolm, his experiences and his passion for photography. (ABOUT : DONE)
 
-• A page that provides information about Malcolm’s prices. (SERVICES : TODO)
+• A page that provides information about Malcolm’s prices. (SERVICES : DONE)
 
-• A series of pages (initially between three and six pages) that will act as a gallery and showcase of Malcolm’s photography. (GALLERY : WORKING ON)
+• A series of pages (initially between three and six pages) that will act as a gallery and showcase of Malcolm’s photography. (GALLERY : DONE)
 
 	This is a really important part of the website as it will be the main way in which the services of his business will be promoted. 
 	
 	You will need to think carefully about how to present the images and how to structure this part of the site. 
 	
-	Bear in mind that in the future Malcolm will want to add many additional photographs to this part of the site. [Through a Dashboard]
+	Bear in mind that in the future Malcolm will want to add many additional photographs to this part of the site. [Through a Dashboard : DONE]
 
 • An enquiry form. 
 
@@ -21,4 +21,4 @@ Malcolm is looking for new ways to promote his business and has approached you t
 	- The user will need to be able to enter details such 
 			their contact details, 
 			location and 
-			date of the wedding etc. into a HTML form. (ENQUIRY FORM : TODO)
+			date of the wedding etc. into a HTML form. (ENQUIRY FORM : DONE)

@@ -23,6 +23,20 @@
     user-select: none;
     scroll-behavior: smooth;
 }
+[disabled]{
+    color: #797878;
+    user-select: none;
+}
+input::placeholder,
+textarea::placeholder {
+    font-weight: 600;
+}
+.flex{
+    display: flex;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
 /*----------------*/
     /* Colors */
 /*----------------*/
@@ -54,6 +68,12 @@
     display: flex;
     align-items: center;
     height: 450px;
+}
+.testimonials{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .foot{
     display: flex;
@@ -308,39 +328,18 @@ nav ul li:hover{
 .picinfo p.active{
     opacity: 1;
 }
-@keyframes text-changer {
-    0% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 1;
-    }
-    30% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    55% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
-}
 .picinfo p:nth-child(1) {
-    animation: text-changer 9s infinite;
+    animation: slide 9s infinite;
 }
 .picinfo p:nth-child(2) {
-    animation: text-changer 9s infinite 3s;
+    animation: slide 9s infinite 3s;
 }
 .picinfo p:nth-child(3) {
-    animation: text-changer 9s infinite 6s;
+    animation: slide 9s infinite 6s;
 }
 /*img carousel*/
 #carousel{
     filter: drop-shadow(.5rem .5rem 1rem #000);
-
     height: 300px;
     width: 700px;
     position: relative;
@@ -448,20 +447,18 @@ nav ul li:hover{
     animation: bagaga 9s infinite 6s;
 }
 /*--------------*/
-/*sign children*/
+/*sign and packages children*/
 /*--------------*/
-.signup{
-    width: 30%;
-}
-.packages{
-    width: 70%;
-}
 .signup,.packages{
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
+}
+.packages{
+    height: 65vh;
 }
 #signupbtn{
     height: 50px;
@@ -495,13 +492,6 @@ nav ul li:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.arrow{
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
 }
 .packs{
     width: 500px;
@@ -553,6 +543,89 @@ nav ul li:hover{
     font-weight: 600;
     text-align: center;
 }
+/*====================*/
+/*Testimonials section*/
+/*====================*/
+.testi{
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s;
+    width: 60%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.testi.active{
+    opacity: 1;
+}
+@keyframes testi-anim {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    55% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+} 
+.testi:nth-child(1){
+    animation: testi-anim 15s infinite;
+}
+.testi:nth-child(2){
+    animation: testi-anim 15s infinite 3s;
+}
+.testi:nth-child(3){
+    animation: testi-anim 15s infinite 6s;
+}
+.testi:nth-child(4){
+    animation: testi-anim 15s infinite 9s;
+}
+.testi:nth-child(5){
+    animation: testi-anim 15s infinite 12s;
+}
+.testi-span{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    max-width: inherit;
+    width: 100%;
+}
+.testi-h1{
+    font-family: Thasadith,sans-serif;
+    height: fit-content;
+    max-width: fit-content;
+    font-size: 35px;
+}
+strong{
+    font-size: x-large;
+}
+.testi-p{
+    font-family: Poppins,Helvetica, sans-serif;
+}
+.testi-img{
+    height: 100px;
+    width: 100px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #D48D99;
+}
+/*footer*/
 .foot{
     display: flex;
     align-items: center;
@@ -746,7 +819,7 @@ nav ul li:hover{
 #control-section{
     display: flex;
     align-items: center;
-    width: 22%;
+    width: 15%;
     height: calc(100vh - 90px);
 }
 #control-panel{
@@ -754,7 +827,7 @@ nav ul li:hover{
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     gap: 1em;
     align-items: center;
 }
@@ -762,7 +835,7 @@ nav ul li:hover{
     font-family: Courgette,serif;
 }
 .control-button{
-    height: 150px;
+    height: 100px;
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -770,25 +843,31 @@ nav ul li:hover{
     align-items: center;
     color: #D48D99;
     font-family: Poppins,serif;
+    text-align: center;
     border: 1px solid #D48D99;
-    border-radius: 10px;
+    border-radius: 50px;
     transition: .3s;
     cursor: pointer;
+}
+.control-button:nth-child(1){
+    margin-top: 10%;
 }
 .control-button:hover{
     background-color: #D48D99;
     color: white;
 }
 .control-button img{
-    height: 50px;
-    width: 52px;
+    height: 30px;
+    width: 30px;
 }
 #task-pane{
-    width: 78%;
+    width: 85%;
     height: calc(100vh - 90px);
 }
 .main{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;    
     gap: 1em;
     position: absolute;
@@ -797,30 +876,34 @@ nav ul li:hover{
     background-color: #0F131F;
     font-family: Poppins,serif;
 }
+.admin-main{
+    justify-content: start;
+}
 .main h1{
     width: fit-content;
 }
 .main:nth-child(1){
     z-index: 3;
 }
-/*--main1 children--*/
-#uploadForm{
+.admin-form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 99.8%;
+    height: inherit;
     gap: 1em;
 }
+/*--main1 children--*/
 #selectedImage,#imgSelecter{
     width: fit-content;
 }
 #imgSelecter{
     z-index: 3;
     min-height: 22px;
-    border: 1px solid #aaa;
-    border-radius: 10px;
-    padding: 15px;
+    border: 1px solid #D48D99;
+    margin-left: 3px;
     width: 90%;
-    height: 10%;
+    height: 100%;
 }
 #selectedImage{
     z-index: 1;
@@ -830,35 +913,40 @@ nav ul li:hover{
 #selectedImage[src=""] {
     display: none;
 }
-#uploadBtn,#goBackButton,#deletebtn{
+.dash_btn{
     all: unset;
+    min-width: 120px;
+    text-align: center;
     width: fit-content;
     background-color: #D48D99;
+    color: #FFF;
+    border-bottom: 5px solid #cf4058;
+    box-shadow: 1px 1px 5px 1px #cf4058;
+    border-radius: 30px;
     padding: 10px;
+    transition: ease-in-out .1s;
 }
-#uploadBtn:hover,#goBackButton:hover,#deletebtn:hover{
-    background-color: #d48d99b2;
+.dash_btn:hover{
+    border-bottom: 5px solid #0F131F;
+    box-shadow: none;
+    transform: translateY(5px);
 }
+
 /*-------------*/
     /*main2*/
 /*-------------*/
-
-#main2{
-    display: flex;
-    flex-direction: column;
-}
 #main2 select{
-    width: 50%;
+    width: 70%;
 }
 #deleteImages{
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 1em;
     align-items: center;
     justify-content: space-evenly;
-    height: 100%;
 }
-#selectImagetoDelete,#selectImagetoDelete option{
+.userSelect,.userSelect option{
     background-color: #0F131F;
     color: #fff;
     font-family: Poppins,serif;
@@ -866,10 +954,21 @@ nav ul li:hover{
     outline: none;
     padding: 5px;
 }
+.userSelect{
+    width: 100%;
+    border: 1px solid #D48D99;
+}
+.userSelect option{
+    width: 100%; /* Make the select as wide as its container */
+    overflow: hidden; /* Hide any overflowing text */
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-overflow: ellipsis; /* Show ellipsis (...) for long text */
+    text-align: center;
+}
 /*------------*/
  /*user dash*/
 /*------------*/
-#frmAddEnqr{
+.userFormDiv{
     height: 500px;
     width: 450px;
     padding: 5px;
@@ -881,7 +980,7 @@ nav ul li:hover{
     justify-content: space-evenly;
     gap: 10px;
 }
-#frmAddEnqr button{
+.userFormDiv button{
     all: unset;
     background-color: #D48D99;
     border: 1px solid transparent;
@@ -890,46 +989,101 @@ nav ul li:hover{
     border-radius: 5px;
     transition: .3s;
 }
-#frmAddEnqr button:hover{
+.userFormDiv button:hover{
     background-color: transparent;
     border: 1px solid #D48D99;
     color: #D48D99;
 }
-#frmAddEnqr input{
+.userFormDiv input,#txtTestimonial{
     border: 1px solid #D48D99;
     font-family: Thasadith,serif;
     background-color: #0F131F;
     border-radius: 5px;
 }
-#frmAddEnqr input,#frmAddEnqr button{
+.userFormDiv input,.userFormDiv button,#txtTestimonial{
     padding: 2px;
 }
-#frmAddEnqr input,#frmAddEnqr p,#frmAddEnqr button{
+.userFormDiv input,.userFormDiv p,.userFormDiv button,#txtTestimonial{
     width: 350px;
     height: 25px;
     outline: none;
-    
+}
+#txtTestimonial{
+    height: 50%;
+}
+#txtTestimonial.too-long {
+    background-color: #D48D99;
 }
 .jobTypeSelecter{
-    width: 250px;
+    width: fit-content;
     border: 1px solid #D48D99;
     border-radius: 5px;
     padding: 5px;
 }
+.spFlex{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 350px;
+}
+.spFlex p{
+    width: fit-content;
+}
 .spJob{
     display: flex;
     align-items: center;
+    width: fit-content;
+}
+.spDateTime{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+}
+.spDateTime input{
+    width: 100%;
 }
 .lblJob{
-    width: 110px;
+    width: 70px;
     font-size: smaller;
     height: fit-content;
     margin-left: 10px;
 }
-.rdJob{
-    display: flex;
-    transform: scale(.5);
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Invert the icon color */
 }
+input[type="radio"]{
+    width: 15px;
+}
+.Select-Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tooltip {
+    position: absolute; /* This is necessary for the tooltip positioning */
+    display: inline-block; /* Ensures the tooltip takes the width of its content */
+    cursor: pointer; /* Change cursor on hover (optional) */
+}  
+.tooltip::before {
+    content: "Updating Accepted Enquaries will set them as Unaccepted Enquaries!"; /* Text or content of the tooltip */
+    width: 300px;
+    position: absolute;
+    top: -30px; /* Adjust the distance of the tooltip from the element */
+    left: 50%; /* Position it in the middle of the element */
+    transform: translateX(-50%); /* Center horizontally */
+    background-color: #80788D; /* Background color of the tooltip */
+    color: #fff; /* Text color of the tooltip */
+    padding: 5px 10px; /* Padding for the tooltip content */
+    border-radius: 4px; /* Rounded corners */
+    opacity: 0; /* Initially hide the tooltip */
+    transition: opacity 0.2s; /* Add a smooth fade-in transition */
+}
+.tooltip:hover::before {
+    opacity: 1; /* Show the tooltip on hover */
+}
+  
 /*============*/
   /*php file*/
 /*============*/
@@ -944,14 +1098,47 @@ nav ul li:hover{
     justify-content: center;
     gap: 1em;
 }
-#goBackButton{
-    color: white;
-}
 #successContent{
     display: flex;
     flex-direction: column;
     gap: 1em;
     align-items: center;
+}
+/*===================================================================================*/
+                                    /*ENQUIERY VIEWER*/
+/*===================================================================================*/
+a{
+    color: #80788D;
+}
+th,td{
+    text-align: center;
+}
+td{
+    font-size: small;
+}
+th{
+    padding: 0px 5px;
+}
+table{
+    border: 1px solid #D48D99;
+    border-collapse: collapse;
+    width: 100%;
+}
+.statusImg{
+    height: 23px;
+    position: relative;
+    top: 50%;
+    transform: translate(-0%,12.5%);
+}
+.enqBtn{
+    all: unset;
+    font-size: small;
+    text-decoration: underline;
+    width: fit-content;
+    height: 25px;
+    color: #D48D99;
+    padding: 0 10px;
+    cursor: pointer;
 }
 /*===================================================================================*/
                                     /*MEDIA QUERIES*/
@@ -1012,9 +1199,6 @@ nav ul li:hover{
 @media (max-width: 819px) {
     .sign{
         flex-direction: column;
-    }
-    .arrow{
-        display: none;
     }
 }
 @media (max-width: 700px) {
@@ -1116,22 +1300,32 @@ nav ul li:hover{
     #mid-head{
         transform: translate(50%,-50%)scale(.7);
     }
+    .arrow{
+        display: none;
+    }
 }
-/*510*/
+/*4 sign section*/
 @media (max-width: 510px) {
     .sign{
-        height: 150vh;
+        height: fit-content;
     }
     .signup{
         height: 50vh;
     }
+    #hirepacks{
+        height: 100vh;
+    }
     .packages{
         display: flex;
+        justify-content: center;
+        align-items: center;
         gap: 1em;
         height: 100%;
     }
     #pack-carousel{
-        justify-content: end;
+        position:relative;
+        height: fit-content;
+        bottom: 0;
     }
     .packs{
         flex-direction: column;
@@ -1144,6 +1338,18 @@ nav ul li:hover{
     }
     .pack:nth-child(2){
         transform: none;
+    }
+}
+/*4 testi*/
+@media (max-width: 425px) {
+    .testimonials{
+        height: 100vh;
+    }
+    .testi-span{
+        flex-direction: column;
+    }
+    .testi-h1{
+        min-width: 100%;
     }
 }
 @media (max-width: 360px) {

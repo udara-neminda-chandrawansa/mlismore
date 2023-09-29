@@ -8,6 +8,21 @@
     <link rel="website icon" href="images/portrait.png">
     <script src="script.js"></script>
     <title>Photography at its finest | mlismore.com</title>
+    <style>
+        .message_section{
+            padding: 0px 30px;
+            height: calc(100vh - 90px);
+            overflow-y: scroll;
+        }
+        .message_section p{
+            padding-top: 30px;
+            font-family: Thasadith,serif;
+            font-weight: 600;
+        }
+        .message_section p a{
+            color: #000;
+        }
+    </style>
 </head>
 <body class="light-bg">
     <section id="nav-section" class="light-bg">
@@ -41,30 +56,33 @@
             </ul>
         </nav>
     </section>
-    <!--Sign Section-->
-    <section id="sign">
-        <form action="dbcon.php" method="post" id="sign-form">
-            <div id="sign-body" class="dark-bg">
-                <!--Title-->
-                <h1 id="sign-title">Login to your account</h1>
-                <!--Label-->
-                <span class="sign-label"><p>Username</p></span>            
-                <!--Input-->
-                <input type="text" name="username" id="username" placeholder="Enter your username">
-                <!--Label-->
-                <span class="sign-label"><p>Password</p></span>            
-                <!--Input-->
-                <input type="password" name="password" id="password" placeholder="Enter your password">
-                <!--Page Name Holder-->
-                <input type="hidden" name="pagename" value="login">
-                <!--Submit-->
-                <button type="submit">Login</button>
-                <!--Anchor-->
-                <span id="sign-links"><a href="sign.html">don't have an account..?</a></span>
-            </div>
-        </form>        
+    <section class="message_section">
+    <?php
+        include "conn.php";
+
+
+        // SQL query to retrieve testimonials with user names
+        $sql = "SELECT * FROM contacts";
+
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            // Output data for each testimonial
+            while ($row = $result->fetch_assoc()) {
+
+                $email = $row["cEmail"]; // get vars
+                $message = $row["cMessage"];
+
+                echo "<p><a href='mailto:$email'>$email</a> texted : $message</p>";
+            }
+        } else {
+            echo "No testimonials available.";
+        }
+
+        // Close the database connection
+        $conn->close();
+    ?>
     </section>
-    <!--Footer-->
     <section id="footer-section">
         <footer class="dark-bg foot">
             <div class="foot-links">
@@ -85,5 +103,5 @@
             </div>
         </footer>
     </section>
-
 </body>
+</html>

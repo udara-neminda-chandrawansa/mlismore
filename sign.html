@@ -16,16 +16,16 @@
                 <img src="images/logo.png" alt="logo" style="filter:drop-shadow(1px 1px 1px #000);" onclick="navToggler('')">
             </div>
             <ul id="nav">
-                <li onclick="location.href = 'index.html';">Home</li>
+                <li onclick="location.href = 'index.php';">Home</li>
                 <li>Services
                     <i class="fa fa-caret-down" id="dark-caret-down"></i>
                     <div class="subnav">
-                        <ul>
-                            <li>Weddings</li>
-                            <li>Portraits</li>
-                            <li>Social Events</li>
-                        </ul>
-                    </div>
+                            <ul>
+                                <li onclick="window.location.href='services.html';">Weddings</li>
+                                <li onclick="window.location.href='services.html#portraits';">Portraits</li>
+                                <li onclick="window.location.href='services.html#events';">Social Events</li>
+                            </ul>
+                        </div>
                 </li>
                 <li>Gallery
                     <i class="fa fa-caret-down" id="dark-caret-down"></i>
@@ -70,20 +70,21 @@
         <footer class="dark-bg foot">
             <div class="foot-links">
                 <ul>
-                    <li>About Me</li>
-                    <li>Testimonials</li>
-                    <li>Gallery</li>
-                    <li>Contact Us</li>
+                    <li onclick="window.location.href='about.html'">About Me</li>
+                    <li onclick="window.location.href='testimonials.php'">Testimonials</li>
+                    <li onclick="window.location.href='gallery.html'">Gallery</li>
+                    <li onclick="window.location.href='contacts.html'">Contact Us</li>
                 </ul>
             </div>
             <div class="social">
                 <ul>
                     <li>follow us on social media</li>
-                    <li><img src="images/fb.png" alt="fb"></li>
-                    <li><img src="images/insta.png" alt="insta"></li>
-                    <li><img src="images/lkdin.png" alt="lkdin"></li>
+                    <li onclick="window.location.href='https://www.facebook.com/'"><img src="images/fb.png" alt="fb"></li>
+                    <li onclick="window.location.href='https://www.instagram.com/'"><img src="images/insta.png" alt="insta"></li>
+                    <li onclick="window.location.href='https://www.linkedin.com/'"><img src="images/lkdin.png" alt="lkdin"></li>
                 </ul>
             </div>
         </footer>
     </section>
+
 </body>

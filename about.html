@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="website icon" href="images/portrait.png">
+    <script src="script.js"></script>
+    <title>Photography at its finest | mlismore.com</title>
+</head>
+<style>
+    #about{
+        min-height: calc(100vh - 90px);
+        font-family: Thasadith, 'Arial Narrow', Arial, sans-serif;
+        font-size: large;
+        text-align: justify;
+        padding: 0px 30px 0px 30px;
+    }
+    .spacer{
+        height: 25px;
+    }
+    .about-h1{
+        color: #D48D99;filter: drop-shadow(1px 1px 1px #fff);
+    }
+    .about-container{
+        display: flex;
+        gap: 1em;
+    }
+    .p-container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .p-container p{
+        opacity: 0;
+        animation: about_anime 3s forwards;
+    }
+    @keyframes about_anime{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+        
+    }
+    .typing-text {
+        white-space: nowrap;
+        overflow: hidden;
+        width: 0; /* Start with zero width */
+        animation: typing 3s steps(40, end) forwards;
+    }
+
+    @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+    }
+
+</style>
+<body>
+    <!--nav section-->
+    <section id="nav-section" class="light-bg">
+        <nav id="dark-nav">
+            <div id="logo">
+                <img src="images/logo.png" alt="logo" style="filter:drop-shadow(1px 1px 1px #000);" onclick="navToggler('')">
+            </div>
+            <ul id="nav">
+                <li onclick="location.href = 'index.php';">Home</li>
+                <li>Services
+                    <i class="fa fa-caret-down" id="dark-caret-down"></i>
+                    <div class="subnav">
+                            <ul>
+                                <li onclick="window.location.href='services.html';">Weddings</li>
+                                <li onclick="window.location.href='services.html#portraits';">Portraits</li>
+                                <li onclick="window.location.href='services.html#events';">Social Events</li>
+                            </ul>
+                        </div>
+                </li>
+                <li>Gallery
+                    <i class="fa fa-caret-down" id="dark-caret-down"></i>
+                    <div class="subnav">
+                        <ul>
+                            <li onclick="window.location.href = 'gallery.html';">Landscape</li>
+                            <li onclick="window.location.href = 'gallery.html#wildlife-section';">Wildlife</li>
+                            <li onclick="window.location.href = 'gallery.html#birds-section';">Coastal Birds</li>
+                        </ul>
+                    </div>
+                </li>
+                <li onclick="window.location.href='login.html'">Sign In</li>
+            </ul>
+        </nav>
+    </section>
+    <!--About Section-->
+    <section id="about" class="light-bg">
+        <div class="spacer"></div>
+        <h1 class="about-h1">About Malcolm Lismore Photography</h1>
+        <div class="about-container">
+            <div class="p-container">
+                <p>Welcome to the captivating world of Malcolm Lismore Photography, where the beauty of nature meets the art of the lens. Located on the stunning North West coast of Scotland, I, Malcolm Lismore, am a freelance photographer deeply passionate about capturing the wonders of the natural world.</p>
+
+                <p>My lens tells stories of the rugged Scottish landscape, with its breathtaking highlands, serene lochs, and dramatic cliffs. Through my photography, you'll discover the untamed beauty of this enchanting region, where each frame is a testament to the wild and awe-inspiring landscapes that define Scotland.</p>
+                
+                <p>But my lens doesn't stop at landscapes alone. I also have a profound love for the wildlife that calls this place home. From the elusive red deer to the majestic golden eagle, my photographs bring you face-to-face with the fascinating creatures that inhabit Scotland's wilderness.</p>
+                
+                <p>Beyond the realm of nature, I am equally skilled in the art of capturing life's most precious moments. Whether it's your special day, a family portrait, or a milestone event, my lens is ready to preserve those cherished memories for a lifetime.</p>
+                
+                <p>Feel free to explore my website, and if you're looking for a photographer who can turn moments into art, don't hesitate to reach out. From weddings to wildlife, landscapes to portraits, Malcolm Lismore Photography is your gateway to the beauty that surrounds us.</p>        
+                <p>Thank you for visiting, and I hope you find inspiration and joy in the images I've had the privilege to capture.</p>
+            </div>
+            <img src="images/portrait.png" alt="portrait">
+        </div>
+    </section>
+    <section id="footer-section">
+    <footer class="dark-bg foot">
+        <div class="foot-links">
+            <ul>
+                <li onclick="window.location.href='about.html'">About Me</li>
+                <li onclick="window.location.href='testimonials.php'">Testimonials</li>
+                <li onclick="window.location.href='gallery.html'">Gallery</li>
+                <li onclick="window.location.href='contacts.html'">Contact Us</li>
+            </ul>
+        </div>
+        <div class="social">
+            <ul>
+                <li>follow us on social media</li>
+                <li onclick="window.location.href='https://www.facebook.com/'"><img src="images/fb.png" alt="fb"></li>
+                <li onclick="window.location.href='https://www.instagram.com/'"><img src="images/insta.png" alt="insta"></li>
+                <li onclick="window.location.href='https://www.linkedin.com/'"><img src="images/lkdin.png" alt="lkdin"></li>
+            </ul>
+        </div>
+    </footer>
+</section>
+</body>
+</html>

@@ -9,16 +9,39 @@
     <script src="script.js"></script>
     <title>Photography at its finest | mlismore.com</title>
 </head>
-<body class="light-bg">
-    <section id="nav-section" class="light-bg">
-        <nav id="dark-nav">
+<style>
+    body{
+        background-color: #0F131F;
+    }
+    .testi2{
+        display:flex;align-items:center;flex-direction:column;padding-top: 20px;
+        animation: testi_anime 3s forwards;
+    }
+    @keyframes testi_anime{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    .testi2 .testi-span{
+        display:flex;gap:1em;
+    }
+    .testi2 .testi-span .testi-img{
+        margin-left:20px;
+    }
+</style>
+<body>
+    <section id="nav-section" class="dark-bg">
+        <nav>
             <div id="logo">
-                <img src="images/logo.png" alt="logo" style="filter:drop-shadow(1px 1px 1px #000);" onclick="navToggler('')">
+                <img src="images/logo.png" alt="logo" onclick="navToggler('')">
             </div>
-            <ul id="nav">
+            <ul class="nav-ul" id="nav">
                 <li onclick="location.href = 'index.php';">Home</li>
                 <li>Services
-                    <i class="fa fa-caret-down" id="dark-caret-down"></i>
+                    <i class="fa fa-caret-down"></i>
                     <div class="subnav">
                             <ul>
                                 <li onclick="window.location.href='services.html';">Weddings</li>
@@ -28,7 +51,7 @@
                         </div>
                 </li>
                 <li>Gallery
-                    <i class="fa fa-caret-down" id="dark-caret-down"></i>
+                    <i class="fa fa-caret-down"></i>
                     <div class="subnav">
                         <ul>
                             <li onclick="window.location.href = 'gallery.html';">Landscape</li>
@@ -41,30 +64,37 @@
             </ul>
         </nav>
     </section>
-    <!--Sign Section-->
-    <section id="sign">
-        <form action="dbcon.php" method="post" id="sign-form">
-            <div id="sign-body" class="dark-bg">
-                <!--Title-->
-                <h1 id="sign-title">Login to your account</h1>
-                <!--Label-->
-                <span class="sign-label"><p>Username</p></span>            
-                <!--Input-->
-                <input type="text" name="username" id="username" placeholder="Enter your username">
-                <!--Label-->
-                <span class="sign-label"><p>Password</p></span>            
-                <!--Input-->
-                <input type="password" name="password" id="password" placeholder="Enter your password">
-                <!--Page Name Holder-->
-                <input type="hidden" name="pagename" value="login">
-                <!--Submit-->
-                <button type="submit">Login</button>
-                <!--Anchor-->
-                <span id="sign-links"><a href="sign.html">don't have an account..?</a></span>
-            </div>
-        </form>        
-    </section>
-    <!--Footer-->
+    <?php
+        // Establish a database connection
+        include "conn.php";
+
+        // SQL query to retrieve testimonials with user names
+        $sql = "SELECT ua.accName, ua.accPIC, t.testDesc FROM testimonials t INNER JOIN useraccounts ua ON t.accID = ua.accID";
+
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            // Output data for each testimonial
+            while ($row = $result->fetch_assoc()) {
+
+                $uname = $row["accName"]; // get vars
+                $utest = $row["testDesc"];
+
+                echo "<div class='dark-bg testi2'>
+                        <span class='testi-span'>
+                            <img src='http://localhost/mlismore.com/picdisplay.php?username=$uname' class='testi-img'>
+                            <h1 class='testi-h1'>" . $uname . " said,</h1>
+                        </span>
+                        <p class='testi-p'><strong>``</strong>" . $utest . "<strong>``</strong></p>
+                    </div>";
+            }
+        } else {
+            echo "No testimonials available.";
+        }
+
+        // Close the database connection
+        $conn->close();
+    ?>
     <section id="footer-section">
         <footer class="dark-bg foot">
             <div class="foot-links">
@@ -85,5 +115,5 @@
             </div>
         </footer>
     </section>
-
 </body>
+</html>
